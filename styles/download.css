@@ -1,18 +1,44 @@
 #download {
-  .card {
-    padding: 3rem 1.5rem 15rem;
+  & .card {
     position: relative;
+    padding: 3rem 1.5rem 15rem;
+
+    & > div {
+      & h2 {
+        margin-top: .5rem;
+      }
+
+      & p {
+        margin-top: .5rem;
+        color: var(--text-color-secondary);
+      }
+    }
 
     & .buttons {
       flex-wrap: wrap;
       margin-top: 2rem;
     }
 
-    & > img {
+    & img:nth-child(2) {
       position: absolute;
-      width: 14.5rem;
-      bottom: 0;
-      right: -3.0rem;
+      width: 14.875rem;
+      bottom: -2.3rem;
+      right: -2.5rem;
+    }
+
+    @media (width >= 80em) {
+      & > div {
+        width: 40rem;
+        max-height: 10.375rem;
+        margin-left: 3rem;
+        margin-top: 4rem;
+      }
+
+      & img:nth-child(2) {
+        width: 29.5rem;
+        top: -4.4rem;
+        right: -2rem;
+      }
     }
   }
 }
