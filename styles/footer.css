@@ -1,0 +1,61 @@
+footer {
+  padding: 3rem 3rem 1.5rem;
+  color: var(--text-color-secondary);
+
+  & .container {
+    gap: 3rem;
+  }
+
+  & .menubar {
+    gap: 3rem;
+
+    & header strong {
+      font-size: .75rem;
+    }
+
+    & nav {
+      gap: 4rem;
+
+      & ul {
+        display: grid;
+        gap: 1.25rem;
+      }
+    }
+  }
+
+  & .footerBottom {
+    display: grid;
+    gap: 3rem;
+
+    & .socialMedia {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    & small {
+      font-size: .875rem;
+    }
+  }
+
+  @media (width >= 80em) {
+    .menubar {
+      & nav {
+        grid-column: 2/4;
+
+        & .logo {
+          grid-column: 1/2;
+        }
+
+        & ul:nth-child(3) {
+          height: 1rem;
+        }
+      }
+    }
+
+    .footerBottom {
+      grid-auto-flow: column;
+      justify-content: space-between;
+    }
+  }
+
+}

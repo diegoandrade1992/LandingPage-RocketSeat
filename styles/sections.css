@@ -3,7 +3,8 @@
   background: url(../assets/img/illustration.svg) no-repeat top/cover;
 }
 
-section {
+section,
+footer {
   & header {
     & strong {
       display: block;
